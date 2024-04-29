@@ -16,7 +16,7 @@ a {
 .top {
     background-color: #CF2B2B;
     height: 92px;
-    width: 414px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +42,7 @@ a {
 }
 
 .container {
-    width: 414px;
+    width: 100%;
     height: 100%;
     margin: 92px 0;
     padding-top: 31px;
@@ -91,7 +91,7 @@ p {
 }
 
 .selected {
-    box-shadow: inset 0 0 0 5px #32B72F, 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 0 5px #32B72F, 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 ion-icon {
@@ -222,7 +222,7 @@ ion-icon {
 
 .footer {
     height: 92px;
-    width: 414px;
+    width: 100%;
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;

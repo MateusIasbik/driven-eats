@@ -163,6 +163,11 @@ ion-icon {
     padding-right: 19px;
 }
 
+.drinks::-webkit-scrollbar {
+    display: none;
+    background-color: transparent;
+}
+
 .drinkOption {
     display: flex;
     flex-direction: column;
@@ -193,6 +198,11 @@ ion-icon {
     scrollbar-width: none;
     padding-bottom: 5px;
     padding-right: 19px;
+}
+
+.desserts::-webkit-scrollbar {
+    display: none;
+    background-color: transparent;
 }
 
 .dessertOption {

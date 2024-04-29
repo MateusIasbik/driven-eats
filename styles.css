@@ -115,7 +115,9 @@ ion-icon {
 
 .plates {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .plateOption {
@@ -145,7 +147,9 @@ ion-icon {
 
 .drinks {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .drinkOption {
@@ -173,7 +177,9 @@ ion-icon {
 
 .desserts {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .dessertOption {

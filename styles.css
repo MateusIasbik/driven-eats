@@ -4,6 +4,12 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 a {

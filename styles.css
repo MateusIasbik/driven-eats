@@ -1,6 +1,6 @@
 body {
     font-family: "Roboto", sans-serif;
-    width: 414px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -23,6 +23,7 @@ a {
     top: 0;
     left: 1;
     z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .top h1 {
@@ -39,7 +40,7 @@ a {
 }
 
 .container {
-    width: 100%;
+    width: 414px;
     height: 100%;
     margin-top: 92px;
     margin-bottom: 92px;
@@ -89,7 +90,7 @@ p {
 }
 
 .selected {
-    box-shadow: inset 0 0 0 5px #32B72F;
+    box-shadow: inset 0 0 0 5px #32B72F, 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 ion-icon {
@@ -110,7 +111,7 @@ ion-icon {
     padding-left: 19px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 27px;
+    margin-bottom: 22px;
 }
 
 .plates {
@@ -118,6 +119,7 @@ ion-icon {
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding-bottom: 5px;
 }
 
 .plateOption {
@@ -142,7 +144,7 @@ ion-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 27px;
+    margin-bottom: 22px;
 }
 
 .drinks {
@@ -150,6 +152,7 @@ ion-icon {
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding-bottom: 5px;
 }
 
 .drinkOption {
@@ -180,6 +183,7 @@ ion-icon {
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding-bottom: 5px;
 }
 
 .dessertOption {

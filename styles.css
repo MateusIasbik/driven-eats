@@ -42,8 +42,7 @@ a {
 .container {
     width: 414px;
     height: 100%;
-    margin-top: 92px;
-    margin-bottom: 92px;
+    margin: 92px 0;
     padding-top: 31px;
     padding-bottom: 16px;
     background-color: #EEEEEE;
@@ -120,6 +119,7 @@ ion-icon {
     -ms-overflow-style: none;
     scrollbar-width: none;
     padding-bottom: 5px;
+    padding-right: 10px;
 }
 
 .plateOption {
@@ -145,6 +145,7 @@ ion-icon {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 22px;
+    padding-right: 10px;
 }
 
 .drinks {
@@ -184,6 +185,7 @@ ion-icon {
     -ms-overflow-style: none;
     scrollbar-width: none;
     padding-bottom: 5px;
+    padding-right: 10px;
 }
 
 .dessertOption {

@@ -8,11 +8,6 @@ body {
     scrollbar-width: none;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-    background-color: transparent;
-}
-
 a {
     color: inherit;
     text-decoration: none;
@@ -127,6 +122,11 @@ ion-icon {
     scrollbar-width: none;
     padding-bottom: 5px;
     padding-right: 10px;
+}
+
+.plates::-webkit-scrollbar {
+    display: none;
+    background-color: transparent;
 }
 
 .plateOption {

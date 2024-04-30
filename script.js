@@ -3,17 +3,17 @@ let drinkChecked = false;
 let dessertChecked = false;
 
 function closeOrder() {
-    alert("botão ativado");
+    const boxOrder = document.querySelector(".confirmOrder");
+    console.log(closeOrder);
+    boxOrder.style.display = "flex";
 }
 
 function buttonReleased(){
     if(dishChecked === true && drinkChecked === true && dessertChecked === true){
         const grayButton = document.querySelector(".footer button");
-        console.log(grayButton);
         grayButton.removeAttribute('disabled');
         grayButton.innerHTML = "Fechar pedido"
         grayButton.classList.add("selectedButton");
-        console.log(grayButton);
     }
 }
 

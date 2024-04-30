@@ -21,24 +21,24 @@
 
     <div class="container">
 
-        <div class="plate">
+        <div class="dish">
             <h2 class="titleContainer">Primeiro, seu prato</h1>
-            <div class="plates">
-                <div class="plateOption selected">
+            <div class="dishes">
+                <div class="dishOption" onclick="selectDish(this)">
                     <img src="projeto__driven-eats__imagens/pf_calabresa.png" alt="calabresa">
                     <h3>Calabreso</h3>
                     <h4>Arroz, feijão, batata canoa e cebola</h4>
                     <p>R$ 10,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>                
-                <div class="plateOption">
+                <div class="dishOption" onclick="selectDish(this)">
                     <img src="projeto__driven-eats__imagens/pf_frango.jpg" alt="frango">
                     <h3>Frango Yin Yang</h3>
                     <h4>Arroz, feijão e um pouco de salada</h4>
                     <p>R$ 14,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="plateOption">
+                <div class="dishOption" onclick="selectDish(this)">
                     <img src="projeto__driven-eats__imagens/pf_carne.jpg" alt="carne">
                     <h3>Bife da casa</h3>
                     <h4>Arroz, feijão, fritas, ovo e salada</h4>
@@ -51,21 +51,21 @@
         <div class="drink">
             <h2 class="titleContainer">Agora, sua bebida</h1>
             <div class="drinks">
-                <div class="drinkOption">
+                <div class="drinkOption" onclick="selectDrink(this)">
                     <img src="projeto__driven-eats__imagens/coca.png" alt="coca-cola">
                     <h3>Coca-cola</h3>
                     <h4>Lata 350ml</h4>
                     <p>R$ 5,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>                    
                 </div>
-                <div class="drinkOption selected">
+                <div class="drinkOption" onclick="selectDrink(this)">
                     <img src="projeto__driven-eats__imagens/fanta.png" alt="fanta">
                     <h3>Fanta</h3>
                     <h4>Lata 350ml</h4>
                     <p>R$ 4,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>                     
                 </div>
-                <div class="drinkOption">
+                <div class="drinkOption" onclick="selectDrink(this)">
                     <img src="projeto__driven-eats__imagens/suco.png" alt="suco">
                     <h3>Suco de laranja</h3>
                     <h4>Copo 450ml</h4>
@@ -78,21 +78,21 @@
         <div class="dessert">
             <h2 class="titleContainer">Por fim, sua sobremesa</h1>
             <div class="desserts">
-                <div class="dessertOption">
+                <div class="dessertOption" onclick="selectDessert(this)">
                     <img src="projeto__driven-eats__imagens/brownie.jpg" alt="brownie">
                     <h3>Brownie</h3>
                     <h4>Brownie delicioso</h4>
                     <p>R$ 6,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>                     
                 </div>
-                <div class="dessertOption">
+                <div class="dessertOption" onclick="selectDessert(this)">
                     <img src="projeto__driven-eats__imagens/pudim.jpg" alt="pudim">
                     <h3>Pudim</h3>
                     <h4>Pudim cremoso</h4>
                     <p>R$ 7,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>                     
                 </div>
-                <div class="dessertOption selected">
+                <div class="dessertOption" onclick="selectDessert(this)">
                     <img src="projeto__driven-eats__imagens/mouse.jpg" alt="mousse">
                     <h3>Mousse</h3>
                     <h4>Mousse Duetto</h4>
@@ -105,7 +105,7 @@
     </div>
 
     <div class="footer">
-            <button>Selecione os 3 itens para fechar o pedido</button>
+            <button disabled onclick="closeOrder()">Selecione os 3 itens para fechar o pedido</button>
     </div>
 
     <div class="confirmOrder">
@@ -133,6 +133,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
+    <script src="script.js"></script>
     
 </body>
 </html>

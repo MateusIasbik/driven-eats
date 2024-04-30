@@ -107,7 +107,7 @@ ion-icon {
     font-size: 19px;
 }
 
-.plate {
+.dish {
     height: 33%;
     padding-left: 19px;
     display: flex;
@@ -115,7 +115,7 @@ ion-icon {
     margin-bottom: 22px;
 }
 
-.plates {
+.dishes {
     display: flex;
     overflow-x: scroll;
     -ms-overflow-style: none;
@@ -124,12 +124,12 @@ ion-icon {
     padding-right: 19px;
 }
 
-.plates::-webkit-scrollbar {
+.dishes::-webkit-scrollbar {
     display: none;
     background-color: transparent;
 }
 
-.plateOption {
+.dishOption {
     display: flex;
     flex-direction: column;
     justify-content: space-around;

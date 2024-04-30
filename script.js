@@ -16,8 +16,18 @@ let dessertValueNumber;
 
 let total;
 
-function finalizeOrder() {
-    alert("Até aqui está tudo bem")
+function openWhatsApp() {
+    
+    const dishWhatsapp = dishName;
+    const drinkWhatsApp = drinkName;
+    const dessertWhatsApp = dessertName;
+    const totalWhatsApp = `R$ ${total.toFixed(2)}`;
+
+    const msg = `Olá, gostaria de fazer o pedido:%0A- Prato: ${dishWhatsapp}%0A- Bebida: ${drinkWhatsApp}%0A- Sobremesa: ${dessertWhatsApp}%0A%0ATotal: ${totalWhatsApp}`;
+
+    const url = `https://api.whatsapp.com/send?phone=5532998223634&text=${msg}`;
+    window.open(url);
+
 }
 
 function cancel() {

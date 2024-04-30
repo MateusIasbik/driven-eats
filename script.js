@@ -16,10 +16,13 @@ let dessertValueNumber;
 
 let total;
 
+function finalizeOrder() {
+    alert("Até aqui está tudo bem")
+}
+
 function cancel() {
     let cancel = document.querySelector(".confirmOrder");
     cancel.style.display = "none";
-
 }
 
 function calcTotal() {

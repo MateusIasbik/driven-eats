@@ -14,16 +14,38 @@ let dishValueNumber;
 let drinkValueNumber;
 let dessertValueNumber;
 
+let total;
+
+function cancel() {
+    let cancel = document.querySelector(".confirmOrder");
+    cancel.style.display = "none";
+
+}
+
+function calcTotal() {
+
+    dishValueNumber = Number(dishValue.replace(",", "."));
+    drinkValueNumber = Number(drinkValue.replace(",", "."));
+    dessertValueNumber = Number(dessertValue.replace(",", "."));
+
+    total = (dishValueNumber + drinkValueNumber + dessertValueNumber);
+
+    return total;
+}
+
 function closeOrder() {
     const boxOrder = document.querySelector(".confirmOrder");
     document.querySelector(".dishSelected").innerHTML = dishName;
     document.querySelector(".drinkSelected").innerHTML = drinkName;
     document.querySelector(".dessertSelected").innerHTML = dessertName;
 
-    document.querySelector(".dishValueSelected").innerHTML = dishValue;
-    document.querySelector(".drinkValueSelected").innerHTML = drinkValue;
-    document.querySelector(".dessertValueSelected").innerHTML = dessertValue;
+    document.querySelector(".dishValueSelected").innerHTML = `R$ ${dishValue}`;
+    document.querySelector(".drinkValueSelected").innerHTML = `R$ ${drinkValue}`;
+    document.querySelector(".dessertValueSelected").innerHTML = `R$ ${dessertValue}`;
 
+    calcTotal();
+
+    document.querySelector(".value span").innerHTML = `R$ ${total.toFixed(2)}`;
 
     boxOrder.style.display = "flex";
 
@@ -76,7 +98,6 @@ function selectDish(dish) {
     dishName = dish.querySelector("h3").innerText;
     dishValue = dish.querySelector("span").innerText;
     dishValueNumber = Number(dishValue.replace(",", "."));
-    console.log(dishValue);
 
     previousDish = document.querySelector(".dishes .selected");
 
@@ -88,5 +109,4 @@ function selectDish(dish) {
     dishChecked = true;
 
     buttonReleased()
-    
 }

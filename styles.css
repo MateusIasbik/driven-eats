@@ -64,14 +64,14 @@ img {
     border-radius: 4px;
     width: 144px;
     height: 87px;
-    margin: 10px auto;
+    margin: 10px auto 0 auto;
 }
 
 h3 {
     color: #333333;
     font-size: 16px;
     font-weight: 700;
-    margin-left: 13px;
+    margin: 0 13px;
 }
 
 h4 {
@@ -86,7 +86,7 @@ p {
     color: #000000;
     font-size: 16;
     font-weight: 400; 
-    margin: 0 0 10px 13px;
+    margin: 0 13px 10px 13px;
 }
 
 .selected {

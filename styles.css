@@ -112,7 +112,7 @@ ion-icon {
     padding-left: 19px;
     display: flex;
     flex-direction: column;
-    /* margin-bottom: 22px; */
+    margin-bottom: 22px;
 }
 
 .dishes {
@@ -151,7 +151,7 @@ ion-icon {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
-    /* margin-bottom: 22px; */
+    margin-bottom: 22px;
 }
 
 .drinks {

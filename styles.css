@@ -315,7 +315,12 @@ ion-icon {
     margin-bottom: 3%;
 }
 
+.boxOrder h1 {
+    margin-top: 2%;  
+}
+
 .boxOrder a {
     font-size: 20px;
-    font-weight: 700;    
+    font-weight: 700;
+    margin-bottom: 2%;   
 }

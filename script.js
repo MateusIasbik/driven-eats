@@ -36,14 +36,11 @@ function cancel() {
 }
 
 function calcTotal() {
-
     dishValueNumber = Number(dishValue.replace(",", "."));
     drinkValueNumber = Number(drinkValue.replace(",", "."));
     dessertValueNumber = Number(dessertValue.replace(",", "."));
 
     total = (dishValueNumber + drinkValueNumber + dessertValueNumber);
-
-    return total;
 }
 
 function closeOrder() {
@@ -78,7 +75,7 @@ function selectDessert(dessert) {
     dessertValue = dessert.querySelector("span").innerText;
     dessertValueNumber = Number(dessertValue.replace(",", "."));
 
-    previousDessert = document.querySelector(".dessert .selected");
+    let previousDessert = document.querySelector(".dessert .selected");
 
     if(previousDessert !== null) {
         previousDessert.classList.remove("selected");
@@ -95,7 +92,7 @@ function selectDrink(drink) {
     drinkValue = drink.querySelector("span").innerText;
     drinkValueNumber = Number(drinkValue.replace(",", "."));
 
-    previousDrink = document.querySelector(".drinks .selected");
+    let previousDrink = document.querySelector(".drinks .selected");
 
     if(previousDrink !== null) {
         previousDrink.classList.remove("selected");
@@ -112,7 +109,7 @@ function selectDish(dish) {
     dishValue = dish.querySelector("span").innerText;
     dishValueNumber = Number(dishValue.replace(",", "."));
 
-    previousDish = document.querySelector(".dishes .selected");
+    let previousDish = document.querySelector(".dishes .selected");
 
     if(previousDish !== null) {
         previousDish.classList.remove("selected");

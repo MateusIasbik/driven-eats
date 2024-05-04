@@ -1,22 +1,17 @@
-let dishChecked = false;
-let drinkChecked = false;
-let dessertChecked = false;
-
-let dishName = "";
-let drinkName = "";
-let dessertName = "";
-
-let dishValue;
-let drinkhValue;
-let dessertValue;
-
-let dishValueNumber;
-let drinkValueNumber;
-let dessertValueNumber;
-
-let total;
+const globalObj = {
+    dishName: undefined,
+    drinkName: undefined,
+    dessertName: undefined,
+    dishValue: undefined,
+    drinkValue: undefined,
+    dessertValue: undefined,
+}
 
 function openWhatsApp() {
+
+    const {dishName, drinkName, dessertName} = globalObj;
+
+    const total = calcTotal();
     
     const dishWhatsapp = dishName;
     const drinkWhatsApp = drinkName;
@@ -36,44 +31,53 @@ function cancel() {
 }
 
 function calcTotal() {
-    dishValueNumber = Number(dishValue.replace(",", "."));
-    drinkValueNumber = Number(drinkValue.replace(",", "."));
-    dessertValueNumber = Number(dessertValue.replace(",", "."));
+    
+    const {dishValue, drinkValue, dessertValue} = globalObj;
 
-    total = (dishValueNumber + drinkValueNumber + dessertValueNumber);
+    let dishValueNumber = Number(dishValue.replace(",", "."));
+    let drinkValueNumber = Number(drinkValue.replace(",", "."));
+    let dessertValueNumber = Number(dessertValue.replace(",", "."));
+
+    return dishValueNumber + drinkValueNumber + dessertValueNumber;
 }
 
 function closeOrder() {
+
+    const {dishName, drinkName, dessertName, dishValue, drinkValue, dessertValue} = globalObj;
+
     const boxOrder = document.querySelector(".confirmOrder");
+    
     document.querySelector(".dishSelected").innerHTML = dishName;
     document.querySelector(".drinkSelected").innerHTML = drinkName;
     document.querySelector(".dessertSelected").innerHTML = dessertName;
-
+    
     document.querySelector(".dishValueSelected").innerHTML = `R$ ${dishValue}`;
     document.querySelector(".drinkValueSelected").innerHTML = `R$ ${drinkValue}`;
     document.querySelector(".dessertValueSelected").innerHTML = `R$ ${dessertValue}`;
-
-    calcTotal();
-
+    
+    const total = calcTotal();
+    
     document.querySelector(".value span").innerHTML = `R$ ${total.toFixed(2)}`;
-
+    
     boxOrder.style.display = "flex";
-
 }
 
-function buttonReleased(){
-    if(dishChecked === true && drinkChecked === true && dessertChecked === true){
+function buttonReleased() {
+
+    const {dishName, drinkName, dessertName} = globalObj;
+
+    if(dishName && drinkName && dessertName){
         const grayButton = document.querySelector(".footer button");
         grayButton.removeAttribute('disabled');
-        grayButton.innerHTML = "Fechar pedido"
         grayButton.classList.add("selectedButton");
+        grayButton.innerHTML = "Fechar pedido";
     }
 }
 
 function selectDessert(dessert) {
-    dessertName = dessert.querySelector("h3").innerText;
-    dessertValue = dessert.querySelector("span").innerText;
-    dessertValueNumber = Number(dessertValue.replace(",", "."));
+
+    globalObj.dessertName = dessert.querySelector("h3").innerText;
+    globalObj.dessertValue = dessert.querySelector("span").innerText;
 
     let previousDessert = document.querySelector(".dessert .selected");
 
@@ -82,15 +86,14 @@ function selectDessert(dessert) {
     }
 
     dessert.classList.add("selected");
-    dessertChecked = true;
 
     buttonReleased();
 }
 
 function selectDrink(drink) {
-    drinkName = drink.querySelector("h3").innerText;
-    drinkValue = drink.querySelector("span").innerText;
-    drinkValueNumber = Number(drinkValue.replace(",", "."));
+
+    globalObj.drinkName = drink.querySelector("h3").innerText;
+    globalObj.drinkValue = drink.querySelector("span").innerText;
 
     let previousDrink = document.querySelector(".drinks .selected");
 
@@ -99,15 +102,14 @@ function selectDrink(drink) {
     }
 
     drink.classList.add("selected");
-    drinkChecked = true;
 
-    buttonReleased()
+    buttonReleased();
 }
 
 function selectDish(dish) {
-    dishName = dish.querySelector("h3").innerText;
-    dishValue = dish.querySelector("span").innerText;
-    dishValueNumber = Number(dishValue.replace(",", "."));
+
+    globalObj.dishName = dish.querySelector("h3").innerText;
+    globalObj.dishValue = dish.querySelector("span").innerText;
 
     let previousDish = document.querySelector(".dishes .selected");
 
@@ -116,7 +118,5 @@ function selectDish(dish) {
     }
     
     dish.classList.add("selected");
-    dishChecked = true;
-
-    buttonReleased()
+    buttonReleased();
 }

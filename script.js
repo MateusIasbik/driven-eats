@@ -1,10 +1,10 @@
 const globalObj = {
-    dishName: undefined,
-    drinkName: undefined,
-    dessertName: undefined,
-    dishValue: undefined,
-    drinkValue: undefined,
-    dessertValue: undefined,
+    dishName: "",
+    drinkName: "",
+    dessertName: "",
+    dishValue: "",
+    drinkValue: "",
+    dessertValue: ""
 }
 
 function openWhatsApp() {
